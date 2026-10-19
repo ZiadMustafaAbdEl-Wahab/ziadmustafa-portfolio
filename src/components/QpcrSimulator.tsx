@@ -109,8 +109,8 @@ export function QpcrSimulator() {
   }, [wells, cycle, threshold, instrument]);
 
   const interpret = (i: number) => {
-    const w = wells[i];
-    const ct = results[i];
+    const w = wells[i]!;
+    const ct = results[i] ?? null;
     if (w.type === "empty") return "—";
     if (cycle < CYCLES) return "running…";
     if (w.type === "pos") return ct !== null && ct < 35 ? "Valid ✓" : "Run invalid ✗";
@@ -135,7 +135,7 @@ export function QpcrSimulator() {
   };
 
   const color = CHANNEL_VAR[channel];
-  const sel = wells[selected];
+  const sel = wells[selected]!;
 
   const updateSel = (patch: Partial<Well>) =>
     setWells((ws) => ws.map((w, i) => (i === selected ? { ...w, ...patch } : w)));
@@ -329,7 +329,7 @@ export function QpcrSimulator() {
                   </span>
                   {Array.from({ length: COLS }, (_, c) => {
                     const i = ri * COLS + c;
-                    const w = wells[i];
+                    const w = wells[i]!;
                     const ct = results[i];
                     const lit = ct !== null && w.type !== "empty";
                     return (

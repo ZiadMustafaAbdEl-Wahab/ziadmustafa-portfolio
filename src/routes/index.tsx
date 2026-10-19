@@ -133,7 +133,7 @@ function Counter({ to, suffix }: { to: number; suffix: string }) {
   useEffect(() => {
     if (!el) return;
     const io = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
+      if (!e?.isIntersecting) return;
       io.disconnect();
       const t0 = performance.now();
       const step = (t: number) => {
@@ -422,10 +422,10 @@ function Index() {
         </div>
       </section>
 
-      {lightbox !== null && (
+      {lightbox !== null && GALLERY[lightbox] && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 p-6" onClick={() => setLightbox(null)}>
-          <img src={GALLERY[lightbox].src} alt={GALLERY[lightbox].t} className="max-h-[85vh] max-w-full rounded-xl" />
-          <p className="absolute bottom-6 font-mono text-sm">{GALLERY[lightbox].t} · click to close</p>
+          <img src={GALLERY[lightbox]!.src} alt={GALLERY[lightbox]!.t} className="max-h-[85vh] max-w-full rounded-xl" />
+          <p className="absolute bottom-6 font-mono text-sm">{GALLERY[lightbox]!.t} · click to close</p>
         </div>
       )}
 
