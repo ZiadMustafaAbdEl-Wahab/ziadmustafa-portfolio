@@ -40,31 +40,56 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.17 0.02 200);
-  --foreground: oklch(0.95 0.01 180);
-  --card: oklch(0.21 0.025 200);
-  --card-foreground: oklch(0.95 0.01 180);
-  --popover: oklch(0.21 0.025 200);
-  --popover-foreground: oklch(0.95 0.01 180);
-  --primary: oklch(0.87 0.2 150);
-  --primary-foreground: oklch(0.17 0.02 200);
-  --secondary: oklch(0.26 0.03 200);
-  --secondary-foreground: oklch(0.95 0.01 180);
-  --muted: oklch(0.25 0.025 200);
-  --muted-foreground: oklch(0.7 0.03 190);
-  --accent: oklch(0.8 0.16 75);
-  --accent-foreground: oklch(0.17 0.02 200);
-  --destructive: oklch(0.65 0.22 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.32 0.03 200);
-  --input: oklch(0.32 0.03 200);
-  --ring: oklch(0.87 0.2 150);
-  --fam: oklch(0.87 0.2 150);
-  --hex: oklch(0.8 0.16 75);
-  --rox: oklch(0.68 0.2 25);
-  --cy5: oklch(0.72 0.14 240);
-  --grid: oklch(0.3 0.03 200 / 0.6);
-  --glow: 0 0 40px -8px color-mix(in oklab, var(--primary) 60%, transparent);
+  /* medical scale */
+  --medical-50: #f0f9ff;
+  --medical-100: #e0f2fe;
+  --medical-200: #bae6fd;
+  --medical-300: #7dd3fc;
+  --medical-400: #38bdf8;
+  --medical-500: #0ea5e9;
+  --medical-600: #0284c7;
+  --medical-700: #0369a1;
+  --medical-800: #075985;
+  --medical-900: #0c4a6e;
+
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+  --primary: #0284c7;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #1e293b;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f59e0b;
+  --accent-foreground: #0f172a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0ea5e9;
+  --fam: #0284c7;
+  --hex: #22c55e;
+  --rox: #f59e0b;
+  --cy5: #7e22ce;
+  --grid: #e2e8f0;
+  --glow: 0 0 40px -8px rgba(14, 165, 233, 0.35);
+}
+
+@theme inline {
+  --color-medical-50: var(--medical-50);
+  --color-medical-100: var(--medical-100);
+  --color-medical-200: var(--medical-200);
+  --color-medical-300: var(--medical-300);
+  --color-medical-400: var(--medical-400);
+  --color-medical-500: var(--medical-500);
+  --color-medical-600: var(--medical-600);
+  --color-medical-700: var(--medical-700);
+  --color-medical-800: var(--medical-800);
+  --color-medical-900: var(--medical-900);
 }
 
 @layer base {
@@ -75,13 +100,14 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
+  h1 { color: var(--medical-800); }
+  h2, h3 { color: #1e293b; }
+  p { color: #475569; }
 }
 
 @utility bg-lab-grid {
-  background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M20 0L0 0 0 20' fill='none' stroke='%23e2e8f0' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-size: 20px 20px;
 }
 
 @utility shadow-glow {
@@ -89,7 +115,7 @@
 }
 
 @utility text-glow {
-  text-shadow: 0 0 24px color-mix(in oklab, var(--primary) 70%, transparent);
+  text-shadow: none;
 }
 
 @keyframes helix {
