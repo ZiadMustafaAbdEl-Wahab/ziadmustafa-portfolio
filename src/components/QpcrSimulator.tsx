@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 
 type WellType = "sample" | "pos" | "neg" | "ntc" | "empty";
 type Well = { type: WellType; logCopies: number };
@@ -323,8 +323,8 @@ export function QpcrSimulator() {
                 </span>
               ))}
               {ROWS.map((r, ri) => (
-                <>
-                  <span key={r} className="self-center font-mono text-[10px] text-muted-foreground">
+                <Fragment key={r}>
+                  <span className="self-center font-mono text-[10px] text-muted-foreground">
                     {r}
                   </span>
                   {Array.from({ length: COLS }, (_, c) => {
@@ -350,7 +350,7 @@ export function QpcrSimulator() {
                       </button>
                     );
                   })}
-                </>
+                </Fragment>
               ))}
             </div>
           </div>
