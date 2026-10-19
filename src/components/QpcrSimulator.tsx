@@ -61,7 +61,7 @@ function curve(well: Well, eff: number, idx: number, cycle: number) {
 }
 
 export function QpcrSimulator() {
-  const [instrument, setInstrument] = useState(INSTRUMENTS[2]);
+  const [instrument, setInstrument] = useState(INSTRUMENTS[2]!);
   const [channel, setChannel] = useState<Channel>("FAM");
   const [wells, setWells] = useState<Well[]>(initialWells);
   const [selected, setSelected] = useState(3);
