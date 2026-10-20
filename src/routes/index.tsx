@@ -8,6 +8,7 @@ import productDemo from "@/assets/product_demonstration.jpg.asset.json";
 import teamWork from "@/assets/team_work.jpg.asset.json";
 import techTraining from "@/assets/technical_training.jpg.asset.json";
 import techVisit from "@/assets/technical_visit.jpg.asset.json";
+import ziadPortrait from "@/assets/ziad.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -232,7 +233,7 @@ function Index() {
           </div>
           <div className="relative">
             <div className="absolute -inset-3 rounded-2xl border border-primary/40" />
-            <img src={productDemo.url} alt="Ziad presenting a molecular diagnostics product" className="relative aspect-[4/5] w-full rounded-xl object-cover" />
+            <img src={ziadPortrait.url} alt="Ziad Mustafa Muhammed standing beside a molecular diagnostics instrument in the lab" className="relative aspect-[3/4] w-full rounded-xl object-cover object-top" />
             <div className="absolute -bottom-5 -left-5 rounded-lg border bg-card px-4 py-3 font-mono text-xs">
               <p className="text-muted-foreground">CURRENTLY @</p>
               <p className="font-bold text-primary">Reme-D Inc.</p>
