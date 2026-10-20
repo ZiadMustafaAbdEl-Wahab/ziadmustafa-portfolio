@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Ziadmustafa Portfolio
+
+Based on the data in the attached files, I want to create a personal website as a portfolio- a creative, and interactive webpage to show my skills, experience, and knowledge. Also, I have attached these images across the webpage. Also add an interactive section for the lab simulator for the qpcr software
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://ziadmustafa-portfolio.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/31a771f2-7e86-4fd7-b7ec-a164375219df).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
