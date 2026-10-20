@@ -8,7 +8,7 @@ import productDemo from "@/assets/product_demonstration.jpg.asset.json";
 import teamWork from "@/assets/team_work.jpg.asset.json";
 import techTraining from "@/assets/technical_training.jpg.asset.json";
 import techVisit from "@/assets/technical_visit.jpg.asset.json";
-import ziadPortrait from "@/assets/ziad.png.asset.json";
+import ziadPortrait from "@/assets/ziad-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
